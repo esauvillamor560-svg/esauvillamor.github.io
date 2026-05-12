@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Esau Villamor | Civil Engineer</title>
 
-<!-- Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -14,19 +13,30 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ===== BODY WITH CREATIVE BACKGROUND ===== */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #f8fafc;
   color: #1e293b;
+
+  background: linear-gradient(135deg, #f8fafc, #e0f2fe);
+
+  background-image:
+    linear-gradient(rgba(56,189,248,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56,189,248,0.08) 1px, transparent 1px),
+    radial-gradient(circle at 20% 30%, rgba(56,189,248,0.15), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(14,165,233,0.15), transparent 40%);
+
+  background-size: 40px 40px, 40px 40px, auto, auto;
 }
 
-/* ===== LAYOUT ===== */
+/* ===== SECTIONS ===== */
 .section {
   min-height: 100vh;
   padding: 60px 10%;
   display: flex;
   align-items: center;
+  backdrop-filter: blur(6px);
 }
 
 /* ===== HERO ===== */
@@ -36,7 +46,7 @@ body {
   gap: 50px;
 }
 
-/* LEFT SIDE */
+/* LEFT */
 .left {
   flex: 1;
   text-align: center;
@@ -59,13 +69,14 @@ body {
   opacity: 0.7;
 }
 
-/* RIGHT SIDE */
+/* RIGHT */
 .right {
   flex: 2;
 }
 
+/* CARDS */
 .card {
-  background: white;
+  background: rgba(255,255,255,0.9);
   padding: 20px;
   border-radius: 12px;
   margin-bottom: 20px;
@@ -77,7 +88,7 @@ body {
   transform: translateY(-5px);
 }
 
-/* ===== PORTFOLIO ===== */
+/* PORTFOLIO */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
@@ -102,7 +113,7 @@ body {
   transform: scale(1.05);
 }
 
-/* ===== CONTACT ===== */
+/* CONTACT */
 .contact a {
   display: block;
   margin: 10px 0;
@@ -115,7 +126,7 @@ body {
   margin-right: 10px;
 }
 
-/* ===== ANIMATION ===== */
+/* ANIMATION */
 .hidden {
   opacity: 0;
   transform: translateY(40px);
@@ -231,7 +242,7 @@ body {
   </div>
 </section>
 
-<!-- JS ANIMATION -->
+<!-- ANIMATION SCRIPT -->
 <script>
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
